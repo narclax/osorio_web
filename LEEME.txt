@@ -1,0 +1,28 @@
+SITIO DR. JOAQUIN PEREZ OSORIO - Estructura
+
+index.html            Pagina unica (contenido, SEO y datos estructurados)
+css/                  bootstrap.min.css, swiper-bundle.min.css, style.css (estilos propios)
+js/                   bootstrap.bundle.min.js, swiper-bundle.min.js, main.js (script propio)
+fonts/                Figtree y Plus Jakarta Sans (licencia abierta). Objektiv: ver abajo
+img/                  1.jpg a 11.jpg: fotos reales de la galeria "Procedimientos en imagenes"
+                      (ya optimizadas: ~1000px de ancho, calidad web)
+
+FUENTE OBJEKTIV
+Copie el archivo TrialVariableFonts/ObjektivVF_Trial_Wght.ttf, tal como viene en el zip
+del cliente, a la carpeta fonts/. Sin ese archivo el sitio usa Figtree.
+La licencia de prueba (Dalton Maag) solo permite uso academico, especulativo o de
+presentacion: no permite publicar el sitio, ni convertir la fuente. Para produccion se
+necesita la licencia web comercial y su version .woff2 (ver comentario en css/style.css).
+
+DATOS A COMPLETAR (buscar en index.html y js/main.js)
+- Telefono: (809) 000-0000 / tel:+18090000000
+- WhatsApp: 18090000000 (enlaces wa.me)
+- Redes sociales: header y footer (hoy apuntan a la pagina principal de cada red)
+- Video: constante VIDEO_SRC en js/main.js
+- Fotos: retrato del doctor, sala de procedimientos y consultorio (3 placeholders SVG
+  fuera de la galeria; la galeria de 11 fotos ya usa las imagenes reales del cliente)
+- Dominio: canonical, Open Graph y JSON-LD (drperezosorio.com es un ejemplo)
+- Ademas: robots.txt y sitemap.xml en el servidor
+
+PARA VERLO EN LOCAL
+Sirvalo por http (por ejemplo: python -m http.server 8000) en lugar de abrir el archivo directamente.
