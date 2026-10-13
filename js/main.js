@@ -1,7 +1,7 @@
 (function(){
   /* ====== CONFIGURACIÓN ====== */
   // URL del video institucional (MP4/WebM). Déjelo vacío para mostrar el marcador.
-  var VIDEO_SRC = "img/cedimat.mp4";
+  var VIDEO_SRC = "osorio.mp4";
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
