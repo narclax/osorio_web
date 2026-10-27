@@ -1,7 +1,7 @@
 (function(){
   /* ====== CONFIGURACIÓN ====== */
   // URL del video institucional (MP4/WebM). Déjelo vacío para mostrar el marcador.
-  var VIDEO_SRC = "osorio.mp4";
+  var VIDEO_SRC = "videos/institucional.mp4";
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -95,20 +95,37 @@
   }
 
 
-  /* Galería con lightbox */
+  /* Galería con lightbox (fotos y videos) */
   var galleryItems = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
   if (galleryItems.length) {
     var lb = document.getElementById('lightbox');
     var lbImg = document.getElementById('lbImg');
     var lbCap = document.getElementById('lbCaption');
     var lbCount = document.getElementById('lbCount');
+    var lbVideo = document.createElement('video');
+    lbVideo.setAttribute('controls', '');
+    lbVideo.setAttribute('playsinline', '');
+    lbVideo.style.cssText = 'max-width:100%;max-height:78vh;width:auto;height:auto;border-radius:14px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);display:none';
+    lbImg.parentNode.insertBefore(lbVideo, lbImg.nextSibling);
     var current = 0, lastFocused = null;
     function renderLb(){
       var el = galleryItems[current];
-      var img = el.querySelector('img');
-      lbImg.src = img.src; lbImg.alt = img.alt;
+      var isVideo = el.getAttribute('data-type') === 'video';
       lbCap.textContent = el.querySelector('.gallery-caption').textContent;
       lbCount.textContent = (current + 1) + ' / ' + galleryItems.length;
+      lbVideo.pause();
+      if (isVideo) {
+        var src = el.getAttribute('data-video');
+        if (lbVideo.getAttribute('src') !== src) lbVideo.setAttribute('src', src);
+        lbImg.style.display = 'none';
+        lbVideo.style.display = 'block';
+        var p = lbVideo.play(); if (p && p.catch) p.catch(function(){});
+      } else {
+        var img = el.querySelector('img');
+        lbImg.src = img.src; lbImg.alt = img.alt;
+        lbVideo.style.display = 'none';
+        lbImg.style.display = 'block';
+      }
     }
     function openLb(i){
       current = i; lastFocused = document.activeElement;
@@ -121,6 +138,7 @@
     function closeLb(){
       lb.classList.remove('open');
       document.body.style.overflow = '';
+      lbVideo.pause();
       setTimeout(function(){ lb.hidden = true; }, 350);
       if (lastFocused) lastFocused.focus();
     }

@@ -1,28 +1,36 @@
-SITIO DR. JOAQUIN PEREZ OSORIO - Estructura
+SITIO DR. JOAQUIN PEREZ OSORIO - Estructura completa (en assets, sin base64)
 
-index.html            Pagina unica (contenido, SEO y datos estructurados)
-css/                  bootstrap.min.css, swiper-bundle.min.css, style.css (estilos propios)
-js/                   bootstrap.bundle.min.js, swiper-bundle.min.js, main.js (script propio)
-fonts/                Figtree y Plus Jakarta Sans (licencia abierta). Objektiv: ver abajo
-img/                  1.jpg a 11.jpg: fotos reales de la galeria "Procedimientos en imagenes"
-                      (ya optimizadas: ~1000px de ancho, calidad web)
-
-FUENTE OBJEKTIV
-Copie el archivo TrialVariableFonts/ObjektivVF_Trial_Wght.ttf, tal como viene en el zip
-del cliente, a la carpeta fonts/. Sin ese archivo el sitio usa Figtree.
-La licencia de prueba (Dalton Maag) solo permite uso academico, especulativo o de
-presentacion: no permite publicar el sitio, ni convertir la fuente. Para produccion se
-necesita la licencia web comercial y su version .woff2 (ver comentario en css/style.css).
-
-DATOS A COMPLETAR (buscar en index.html y js/main.js)
-- Telefono: (809) 000-0000 / tel:+18090000000
-- WhatsApp: 18090000000 (enlaces wa.me)
-- Redes sociales: header y footer (hoy apuntan a la pagina principal de cada red)
-- Video: constante VIDEO_SRC en js/main.js
-- Fotos: retrato del doctor, sala de procedimientos y consultorio (3 placeholders SVG
-  fuera de la galeria; la galeria de 11 fotos ya usa las imagenes reales del cliente)
-- Dominio: canonical, Open Graph y JSON-LD (drperezosorio.com es un ejemplo)
-- Ademas: robots.txt y sitemap.xml en el servidor
+index.html        Pagina unica
+css/               bootstrap.min.css, swiper-bundle.min.css, style.css
+js/                bootstrap.bundle.min.js, swiper-bundle.min.js, main.js
+fonts/             Figtree y Plus Jakarta Sans (locales, sin Google Fonts)
+img/               g1.jpg a g16.jpg: las 11 fotos + 5 miniaturas (posters) de video
+                   de la seccion "Procedimientos en imagenes"
+videos/            Los 6 videos del sitio:
+                     - institucional.mp4            (seccion "Video", autoplay)
+                     - dilatador-peel-away.mp4       (galeria, 0:26)
+                     - dr-osorio-r1.mp4              (galeria, 1:19)
+                     - ya-el-cateter-esta-puesto.mp4 (galeria, 0:29)
+                     - dr-osorio-r2.mp4              (galeria, 0:58)
+                     - dr-osorio-r3.mp4              (galeria, 0:39)
 
 PARA VERLO EN LOCAL
-Sirvalo por http (por ejemplo: python -m http.server 8000) en lugar de abrir el archivo directamente.
+Sirvalo por http, no abra el archivo con doble clic:
+  python -m http.server 8000
+y entre a http://localhost:8000/index.html
+
+GALERIA "PROCEDIMIENTOS EN IMAGENES"
+Van 16 piezas por ahora: 5 videos (destacados, ocupan 2 filas, con boton de play,
+duracion y borde de color) + 11 fotos (1 fila cada una). El orden de los 5 videos
+es provisional; cuando digas el orden final o cuales fotos quitar para compensar,
+reorganizo la parrilla.
+
+PENDIENTE DE SIEMPRE
+- Telefono, WhatsApp, redes sociales: en index.html (buscar "809) 000-0000" y los
+  enlaces wa.me) y en el pie de pagina.
+- 3 fotos placeholder (retrato del doctor, sala, consultorio) siguen con el dibujo
+  SVG de ejemplo: buscar "data:image/svg+xml" en index.html.
+- Fuente Objektiv: licencia de prueba del cliente, no usar en produccion (ver
+  comentario en css/style.css). Si quiere probarla en local, copie el .ttf a fonts/
+  con el nombre que indica ese comentario.
+- Dominio de ejemplo (drperezosorio.com) en las etiquetas SEO de index.html.

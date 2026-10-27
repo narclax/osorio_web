@@ -1,12 +1,13 @@
-/* ================= Fuentes (locales) =================
-   Cuerpo: Objektiv. Coloque en /fonts el archivo variable ObjektivVF_Trial_Wght.ttf
-   (vista previa local, licencia de prueba) o, en producción, la versión web con
-   licencia comercial. Si el archivo no está, se usa Figtree (respaldo, licencia OFL).
-   Títulos: Plus Jakarta Sans (licencia abierta OFL). */
-@font-face{font-family:"Objektiv Trial";font-weight:100 900;font-style:normal;font-display:swap;
-  src:url("../fonts/ObjektivVF_Trial_Wght.ttf") format("truetype")}
-/* Producción con licencia web: reemplace la línea src anterior por
-   src:url("../fonts/ObjektivVF.woff2") format("woff2") */
+/* ---------- Fuente del cuerpo: Objektiv Trial ----------
+   Coloque los archivos de la fuente (p. ej. fonts/ObjektivMk1_Rg.woff2) junto a este HTML.
+   Mientras no estén, se usa Figtree como respaldo. */
+@font-face{font-family:"Objektiv Trial";font-weight:400;font-style:normal;font-display:swap;
+  src:local("Objektiv Trial"),local("Objektiv Mk1")}
+/* Al tener los archivos, use: src:local("Objektiv Trial"),url("fonts/ObjektivMk1_Rg.woff2") format("woff2") */
+@font-face{font-family:"Objektiv Trial";font-weight:700;font-style:normal;font-display:swap;
+  src:local("Objektiv Trial Bold"),local("Objektiv Mk1 Bold")}
+/* Al tener los archivos, agregue: ,url("fonts/ObjektivMk1_Bd.woff2") format("woff2") */
+
 @font-face{font-family:"Figtree";font-weight:400;font-style:normal;font-display:swap;src:url("../fonts/figtree-latin-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Figtree";font-weight:500;font-style:normal;font-display:swap;src:url("../fonts/figtree-latin-500-normal.woff2") format("woff2")}
 @font-face{font-family:"Figtree";font-weight:600;font-style:normal;font-display:swap;src:url("../fonts/figtree-latin-600-normal.woff2") format("woff2")}
@@ -215,6 +216,13 @@ a:hover{color:var(--brand)}
 .gallery-item:hover,.gallery-item:focus-visible{box-shadow:0 24px 50px -22px rgba(15,43,54,.4)}
 .gallery-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;background:linear-gradient(180deg,rgba(15,43,54,0) 45%,rgba(9,32,41,.82) 100%);opacity:0;transition:opacity .4s var(--ease)}
 .gallery-item:hover .gallery-overlay,.gallery-item:focus-visible .gallery-overlay{opacity:1}
+.gallery-video{box-shadow:0 0 0 3px var(--brand),0 24px 50px -22px rgba(37,154,192,.55)}
+.gallery-overlay-video{opacity:1;background:linear-gradient(180deg,rgba(15,43,54,.05) 0%,rgba(9,32,41,.15) 45%,rgba(9,32,41,.88) 100%)}
+.gallery-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(1);width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--brand-dark);display:grid;place-items:center;box-shadow:0 14px 30px -6px rgba(0,0,0,.45);transition:transform .35s var(--ease),background .25s}
+.gallery-item:hover .gallery-play,.gallery-item:focus-visible .gallery-play{transform:translate(-50%,-50%) scale(1.1);background:var(--brand);color:#fff}
+.gallery-play .icon{width:1.7rem;height:1.7rem;margin-left:3px}
+.gallery-duration{position:absolute;top:.7rem;right:.7rem;background:rgba(9,32,41,.72);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.03em;padding:.2rem .5rem;border-radius:6px}
+.gallery-overlay-video .gallery-caption{opacity:1;transform:none}
 .gallery-zoom{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--brand-dark);display:grid;place-items:center;transform:scale(.6);opacity:0;transition:transform .4s var(--ease),opacity .35s}
 .gallery-item:hover .gallery-zoom,.gallery-item:focus-visible .gallery-zoom{transform:scale(1);opacity:1}
 .gallery-zoom .icon{width:1.05rem;height:1.05rem}

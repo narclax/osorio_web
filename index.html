@@ -47,10 +47,11 @@
 
 <script>document.documentElement.classList.add('js');</script>
 
+<!-- Figtree y Plus Jakarta Sans: archivos locales en fonts/, sin depender de Google Fonts -->
+
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body tabindex="-1">
@@ -95,12 +96,6 @@
         <a class="header-phone mb-3 mb-xl-0 me-xl-4" href="tel:+18092588862" aria-label="Llamar al (809) 258-8862"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-telephone"/></svg></span><span>(809) 258-8862</span></a>
         <ul class="social" aria-label="Redes sociales">
           <li><a href="https://www.instagram.com/dr.jposorio/" target="_blank" rel="noopener nofollow" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
-          
-          <!--
-          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener nofollow" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener nofollow" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener nofollow" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
-          -->
         </ul>
       </div>
     </div>
@@ -269,16 +264,8 @@
       <div class="col-lg-5 reveal from-left">
         <figure class="portrait m-0">
           <!-- Reemplace el src por la fotografía del doctor (recomendado 900×1100 px, WebP) -->
-          <!--
           <img width="900" height="1100" alt="Retrato del Dr. Joaquín Eduardo Pérez Osorio, radiólogo vascular e intervencionista" loading="lazy"
-            src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 1100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8f5f9'/%3E%3Cstop offset='1' stop-color='%23c9e6f0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='1100' fill='url(%23g)'/%3E%3Ccircle cx='450' cy='400' r='150' fill='%23ffffff' fill-opacity='.85'/%3E%3Cpath d='M130 1100C130 780 290 660 450 660S770 780 770 1100Z' fill='%23ffffff' fill-opacity='.85'/%3E%3Cpath d='M380 660L450 780L520 660' fill='none' stroke='%23259ac0' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-          -->
-
-
-          <img width="900" height="1100" alt="Retrato del Dr. Joaquín Eduardo Pérez Osorio, radiólogo vascular e intervencionista" loading="lazy"
-            src="img/a.jpg">
-
-
+            src="img/retrato.jpg">
         </figure>
       </div>
       <div class="col-lg-7 bio-copy">
@@ -304,13 +291,7 @@
       <div class="col-lg-6 reveal from-right">
         <figure class="wide-img reveal zoom m-0 mb-4">
           <!-- Reemplace el src por una foto del doctor en sala de procedimientos (1200x750 px) -->
-          
-          <!--
-          <img width="1200" height="750" loading="lazy" alt="El Dr. Osorio durante un procedimiento endovascular" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 750'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8f5f9'/%3E%3Cstop offset='1' stop-color='%23c3e3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='750' fill='url(%23g)'/%3E%3Cpath d='M0 640C220 520 380 700 620 560S1020 380 1200 300V750H0Z' fill='%23ffffff' fill-opacity='.55'/%3E%3Cpath d='M80 620C300 470 460 660 700 500S1040 300 1140 240' fill='none' stroke='%23259ac0' stroke-width='6' stroke-linecap='round' stroke-opacity='.55'/%3E%3Ccircle cx='700' cy='500' r='11' fill='%23259ac0'/%3E%3Ctext x='600' y='190' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' fill='%23177796'%3EImagen: sala de procedimientos%3C/text%3E%3Ctext x='600' y='240' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' fill='%23547080'%3E1200 x 750 px%3C/text%3E%3C/svg%3E">
-          -->
-          <img width="1200" height="750" loading="lazy" alt="El Dr. Osorio durante un procedimiento endovascular" src="img/b.jpg">
-
-
+          <img width="1200" height="750" loading="lazy" alt="El Dr. Osorio durante un procedimiento endovascular" src="img/sala.jpg">
         </figure>
         <h3 class="mb-4">Primicias y aportes</h3>
         <ul class="firsts">
@@ -466,48 +447,68 @@
       <p class="lead-text reveal" style="--d:.1s">Un vistazo a nuestras instalaciones, equipos y procedimientos.</p>
     </div>
     <div class="gallery-grid" id="galleryGrid">
-        <button type="button" class="gallery-item g-big reveal" style="--d:0.00s" data-index="0" aria-label="Ampliar foto: Procedimiento guiado por imagen">
-          <img src="img/1.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — procedimiento guiado por imagen" loading="lazy" width="1000" height="1000">
+        <button type="button" class="gallery-item gallery-video g-tall reveal" style="--d:0.00s" data-index="13" data-type="video" data-video="videos/ya-el-cateter-esta-puesto.mp4" aria-label="Reproducir video: Colocación del catéter">
+          <img src="img/g1.jpg" alt="Dr. Joaquín Pérez Osorio — colocación del catéter" loading="lazy" width="1000" height="1777">
+          <span class="gallery-overlay gallery-overlay-video"><span class="gallery-play"><svg class="icon" aria-hidden="true"><use href="#i-play-fill"/></svg></span><span class="gallery-caption">Colocación del catéter</span><span class="gallery-duration">0:29</span></span>
+        </button>
+        <button type="button" class="gallery-item gallery-video g-tall reveal" style="--d:0.00s" data-index="14" data-type="video" data-video="videos/dr-osorio-r2.mp4" aria-label="Reproducir video: Procedimiento guiado por fluoroscopia">
+          <img src="img/g2.jpg" alt="Dr. Joaquín Pérez Osorio — procedimiento guiado por fluoroscopia" loading="lazy" width="1000" height="1777">
+          <span class="gallery-overlay gallery-overlay-video"><span class="gallery-play"><svg class="icon" aria-hidden="true"><use href="#i-play-fill"/></svg></span><span class="gallery-caption">Procedimiento guiado por fluoroscopia</span><span class="gallery-duration">0:58</span></span>
+        </button>
+        <button type="button" class="gallery-item gallery-video g-tall reveal" style="--d:0.00s" data-index="15" data-type="video" data-video="videos/dr-osorio-r3.mp4" aria-label="Reproducir video: Preparación del dispositivo">
+          <img src="img/g3.jpg" alt="Dr. Joaquín Pérez Osorio — preparación del dispositivo" loading="lazy" width="1000" height="1777">
+          <span class="gallery-overlay gallery-overlay-video"><span class="gallery-play"><svg class="icon" aria-hidden="true"><use href="#i-play-fill"/></svg></span><span class="gallery-caption">Preparación del dispositivo</span><span class="gallery-duration">0:39</span></span>
+        </button>
+        <button type="button" class="gallery-item gallery-video g-tall reveal" style="--d:0.00s" data-index="0" data-type="video" data-video="videos/dilatador-peel-away.mp4" aria-label="Reproducir video: Colocación de dilatador Peel-Away">
+          <img src="img/g4.jpg" alt="Dr. Joaquín Pérez Osorio — colocación de dilatador peel-away" loading="lazy" width="1000" height="1777">
+          <span class="gallery-overlay gallery-overlay-video"><span class="gallery-play"><svg class="icon" aria-hidden="true"><use href="#i-play-fill"/></svg></span><span class="gallery-caption">Colocación de dilatador Peel-Away</span><span class="gallery-duration">0:26</span></span>
+        </button>
+        <button type="button" class="gallery-item gallery-video g-tall reveal" style="--d:0.00s" data-index="1" data-type="video" data-video="videos/dr-osorio-r1.mp4" aria-label="Reproducir video: Procedimiento endovascular">
+          <img src="img/g5.jpg" alt="Dr. Joaquín Pérez Osorio — procedimiento endovascular" loading="lazy" width="1000" height="1777">
+          <span class="gallery-overlay gallery-overlay-video"><span class="gallery-play"><svg class="icon" aria-hidden="true"><use href="#i-play-fill"/></svg></span><span class="gallery-caption">Procedimiento endovascular</span><span class="gallery-duration">1:19</span></span>
+        </button>
+        <button type="button" class="gallery-item g-normal reveal" style="--d:0.00s" data-index="0" aria-label="Ampliar foto: Procedimiento guiado por imagen">
+          <img src="img/g6.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — procedimiento guiado por imagen" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Procedimiento guiado por imagen</span></span>
         </button>
-        <button type="button" class="gallery-item g-tall reveal" style="--d:0.05s" data-index="1" aria-label="Ampliar foto: Sala de angiografía intervencionista">
-          <img src="img/3.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — sala de angiografía intervencionista" loading="lazy" width="1000" height="1000">
+        <button type="button" class="gallery-item g-normal reveal" style="--d:0.05s" data-index="1" aria-label="Ampliar foto: Sala de angiografía intervencionista">
+          <img src="img/g7.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — sala de angiografía intervencionista" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Sala de angiografía intervencionista</span></span>
         </button>
         <button type="button" class="gallery-item g-normal reveal" style="--d:0.10s" data-index="2" aria-label="Ampliar foto: Preparación del procedimiento">
-          <img src="img/2.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — preparación del procedimiento" loading="lazy" width="1000" height="1000">
+          <img src="img/g8.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — preparación del procedimiento" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Preparación del procedimiento</span></span>
         </button>
-        <button type="button" class="gallery-item g-tall reveal" style="--d:0.15s" data-index="3" aria-label="Ampliar foto: Precisión en cada intervención">
-          <img src="img/6.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — precisión en cada intervención" loading="lazy" width="1000" height="1000">
+        <button type="button" class="gallery-item g-normal reveal" style="--d:0.15s" data-index="3" aria-label="Ampliar foto: Precisión en cada intervención">
+          <img src="img/g9.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — precisión en cada intervención" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Precisión en cada intervención</span></span>
         </button>
         <button type="button" class="gallery-item g-normal reveal" style="--d:0.20s" data-index="4" aria-label="Ampliar foto: Equipo médico en sala">
-          <img src="img/4.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — equipo médico en sala" loading="lazy" width="1000" height="1000">
+          <img src="img/g10.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — equipo médico en sala" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Equipo médico en sala</span></span>
         </button>
-        <button type="button" class="gallery-item g-tall reveal" style="--d:0.25s" data-index="5" aria-label="Ampliar foto: Monitoreo del procedimiento">
-          <img src="img/9.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — monitoreo del procedimiento" loading="lazy" width="1000" height="1000">
+        <button type="button" class="gallery-item g-normal reveal" style="--d:0.25s" data-index="5" aria-label="Ampliar foto: Monitoreo del procedimiento">
+          <img src="img/g11.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — monitoreo del procedimiento" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Monitoreo del procedimiento</span></span>
         </button>
         <button type="button" class="gallery-item g-normal reveal" style="--d:0.00s" data-index="6" aria-label="Ampliar foto: Trabajo en equipo">
-          <img src="img/5.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — trabajo en equipo" loading="lazy" width="1000" height="1000">
+          <img src="img/g12.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — trabajo en equipo" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Trabajo en equipo</span></span>
         </button>
         <button type="button" class="gallery-item g-normal reveal" style="--d:0.05s" data-index="7" aria-label="Ampliar foto: Atención especializada">
-          <img src="img/7.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — atención especializada" loading="lazy" width="1000" height="1000">
+          <img src="img/g13.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — atención especializada" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Atención especializada</span></span>
         </button>
-        <button type="button" class="gallery-item g-tall reveal" style="--d:0.10s" data-index="8" aria-label="Ampliar foto: Acceso vascular guiado por imagen">
-          <img src="img/11.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — acceso vascular guiado por imagen" loading="lazy" width="1000" height="1000">
+        <button type="button" class="gallery-item g-normal reveal" style="--d:0.10s" data-index="8" aria-label="Ampliar foto: Acceso vascular guiado por imagen">
+          <img src="img/g14.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — acceso vascular guiado por imagen" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Acceso vascular guiado por imagen</span></span>
         </button>
         <button type="button" class="gallery-item g-normal reveal" style="--d:0.15s" data-index="9" aria-label="Ampliar foto: Cuidado en cada detalle">
-          <img src="img/8.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — cuidado en cada detalle" loading="lazy" width="1000" height="1000">
+          <img src="img/g15.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — cuidado en cada detalle" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Cuidado en cada detalle</span></span>
         </button>
         <button type="button" class="gallery-item g-normal reveal" style="--d:0.20s" data-index="10" aria-label="Ampliar foto: Procedimiento endovascular">
-          <img src="img/10.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — procedimiento endovascular" loading="lazy" width="1000" height="1000">
+          <img src="img/g16.jpg" alt="Dr. Joaquín Pérez Osorio realizando un procedimiento endovascular — procedimiento endovascular" loading="lazy" width="1000" height="1000">
           <span class="gallery-overlay"><span class="gallery-zoom"><svg class="icon" aria-hidden="true"><use href="#i-zoom"/></svg></span><span class="gallery-caption">Procedimiento endovascular</span></span>
         </button>
         </div>
@@ -562,13 +563,7 @@
         <div class="col-lg-5">
           <figure class="wide-img m-0 mb-4">
             <!-- Reemplace el src por una foto del consultorio o del centro médico (1200x750 px) -->
-            <!--
-            <img width="1200" height="750" loading="lazy" alt="Consultorio y centro médico donde atiende el Dr. Osorio" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 750'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8f5f9'/%3E%3Cstop offset='1' stop-color='%23c3e3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='750' fill='url(%23g)'/%3E%3Crect x='150' y='300' width='900' height='450' rx='30' fill='%23ffffff' fill-opacity='.6'/%3E%3Crect x='240' y='380' width='300' height='370' rx='14' fill='%23259ac0' fill-opacity='.18'/%3E%3Crect x='620' y='400' width='330' height='26' rx='13' fill='%23259ac0' fill-opacity='.25'/%3E%3Crect x='620' y='450' width='250' height='26' rx='13' fill='%23259ac0' fill-opacity='.18'/%3E%3Ctext x='600' y='190' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' fill='%23177796'%3EImagen: consultorio o centro médico%3C/text%3E%3Ctext x='600' y='240' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' fill='%23547080'%3E1200 x 750 px%3C/text%3E%3C/svg%3E">
-            -->
-
-            <img width="1200" height="750" loading="lazy" alt="Consultorio y centro médico donde atiende el Dr. Osorio" src="img/c.jpg">
-
-
+            <img width="1200" height="750" loading="lazy" alt="Consultorio y centro médico donde atiende el Dr. Osorio" src="img/consultorio.jpg">
           </figure>
           <div class="d-grid gap-4">
             <div class="place"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-hospital"/></svg></span><p><strong>CEDIMAT</strong>Radiología vascular intervencionista y Cirugía Endovascular Periférica.</p></div>
@@ -593,13 +588,6 @@
         <p class="mb-4" style="max-width:46ch">Radiólogo vascular e intervencionista. Procedimientos mínimamente invasivos para arterias y venas en Santo Domingo, República Dominicana.</p>
         <ul class="social" aria-label="Redes sociales">
           <li><a href="https://www.instagram.com/dr.jposorio/" target="_blank" rel="noopener nofollow" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
-          
-
-          <!--
-          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener nofollow" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener nofollow" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener nofollow" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
-          -->
           <li><a href="https://wa.me/18097670140" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
         </ul>
       </div>
